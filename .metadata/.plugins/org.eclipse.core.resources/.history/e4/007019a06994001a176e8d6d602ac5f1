@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.sql. *" %>
+<%
+	String uid= request.getParameter("id");
+	String upass= request.getParameter("ps");
+	String upass2= request.getParameter("ps2");
+	String uname= request.getParameter("nick");
+	
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection conn  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysns","root","kalutan18*");
+	
+	Statement st = conn.createStatement();
+	
+	String sql ="INSERT INTO user(id, password, name) VALUES(";
+	sql+= "'"+uid+"', ";
+	sql+= "'"+upass+"', ";
+	sql+= "'"+uname+"',";
+	sql+=")";
+	
+	int cnt = st.executeUpdate(sql);
+	String res = (cnt == 0) ? "failed":"success";
+	out.print(res);
+
+%>

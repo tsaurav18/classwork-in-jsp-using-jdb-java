@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="feedAdd.jsp"> 
+Enter you feed List 
+Id <input type="text" name="id"> <br>
+Content <textarea name="content" rows="15"></textarea> <br> 
+
+<input type="submit" value="ok">
+</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="feedAdd.jsp">  <!-- SignupServlet -->
+Id <input type="text" name="id"> <br>
+content <textarea name="content" ></textarea> <br> 
+
+<input type="submit" value="ok">
+</form>
+</body>
+</html>

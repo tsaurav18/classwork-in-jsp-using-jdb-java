@@ -1,0 +1,5 @@
+package simplewebapp.conn;
+
+public class MySQLConnUtils {
+
+}

@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Mon May 18 02:31:13 KST 2020
+org.eclipse.jst.jee.server\:Aloha=/usr/local/apache-tomcat-8.0.32/wtpwebapps/Aloha
+org.eclipse.jst.jee.server\:MySNS=/usr/local/apache-tomcat-8.0.32/wtpwebapps/MySNS
+org.eclipse.jst.jee.server\:Simplejspproject=/usr/local/apache-tomcat-8.0.32/wtpwebapps/Simplejspproject

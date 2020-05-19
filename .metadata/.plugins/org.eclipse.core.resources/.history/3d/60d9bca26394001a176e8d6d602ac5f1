@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.sql. *" %>
+<%
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection conn  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysns","root","kalutan18*");
+	
+	Statement st = conn.createStatement();
+	String str = "<table>";
+	ResultSet rs  = st.executeQuery("SELECT id, name, ts, password from user");
+	while(rs.next()){
+		str+="<tr>";
+		str+="<td>"+ rs.getString("id")+"</td>";
+		str+="<td>"+ rs.getString("name")+"</td>";
+		str+="<td>"+ rs.getString("ts")+"</td>";
+		str+= "<td>"+rs.getString("password")+"</td>";
+		str+= "</tr>";
+		
+	}
+	str+= "</table>";
+	out.print(str);
+	rs.close();
+	st.close();
+	conn.close();
+%>

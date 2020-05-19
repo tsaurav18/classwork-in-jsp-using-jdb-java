@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import ="java.sql.*"%>
+<%
+
+String uid  = request.getParameter("id");
+String ucontent  = request.getParameter("content");
+
+Class.forName("com.mysql.jdbc.Driver");
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysns", "root","kalutan18*");
+Statement st = con.createStatement();
+
+String sql = "INSERT INTO feed(id, content) VALUES(";
+sql+= "'"+uid+"', ";
+sql+= "'"+ucontent+"', ";
+sql+=")";
+
+int countt = st.executeUpdate(sql);
+String res = (countt>0)? "feedlist added successfully":"failed";
+out.print(res);
+
+
+%>
+
